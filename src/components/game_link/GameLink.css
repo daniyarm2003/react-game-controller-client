@@ -1,0 +1,20 @@
+.GameLink {
+    width: 200px;
+    height: 250px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
+    background-color: lightgray;
+    overflow-y: hidden;
+    transition: transform .2s;
+}
+
+a {
+    color: black;
+}
+
+.GameLink:hover {
+    transform: scale(1.01);
+}

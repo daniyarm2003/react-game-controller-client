@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import MCApp from './pages/MCApp';
+import GTAApp from './pages/GTAApp';
+import NoPage from './pages/NoPage';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import TerrariaApp from './pages/TerrariaApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<MainPage />} />
+        <Route exact path="/minecraft" element={<MCApp />} />
+        <Route exact path="/gta" element={<GTAApp />} />
+        <Route exact path="/terraria" element={<TerrariaApp />} />
+        <Route path='*' element={<NoPage />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

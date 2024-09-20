@@ -1,0 +1,13 @@
+body {
+  background-color: cornsilk;
+}
+
+.App {
+  text-align: center;
+}
+
+.Container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
